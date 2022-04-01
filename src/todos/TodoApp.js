@@ -2,11 +2,11 @@ import TodoItem from "./TodoItem";
 import {useState, useEffect} from "react";
 import * as service from "./TodoService";
 
-const TODOS = [
-  {title: "Read Dune", done: true, _id: "123"},
-  {title: "Read Foundation", done: true, _id: "234"},
-  {title: "Read Forever war", done: false, _id: "345"}
-];
+//const TODOS = [
+  //{title: "Read Dune", done: true, _id: "123"},
+  //{title: "Read Foundation", done: true, _id: "234"},
+  //{title: "Read Forever war", done: false, _id: "345"}
+//];
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
