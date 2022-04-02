@@ -17,7 +17,7 @@ export const findAllUsersThatDislikedTuit = (tid) =>
         .then(response => response.data);
 
 
-//This is "userTogglesTUitLikes" in the packet
+//This is "userTogglesTuitLikes" in the packet
 export const userDisikesTuit = (uid, tid) =>
     api.put(`${USERS_API}/${uid}/dislikes/${tid}`)
         .then(response => response.data);
