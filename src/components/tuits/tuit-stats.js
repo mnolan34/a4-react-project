@@ -17,7 +17,7 @@ const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
           <span onClick={() => likeTuit(tuit)}>
               {
                 tuit.stats && tuit.stats.likes && tuit.stats.likes > 0 &&
-                    findAllTuitsDislikedByUser("me").includes(tuit._id) &&
+                    findAllTuitsLikedByUser("me").includes(tuit._id) &&
                   <i className="fa-solid fa-thumbs-up me-1" style={{color: 'blue'}}></i>
               }
               {
