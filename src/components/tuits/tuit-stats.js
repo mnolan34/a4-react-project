@@ -1,6 +1,6 @@
 import React from "react";
-import {userLikesTuit} from "../../services/likes-service";
-import{userDisikesTuit} from "../../services/dislikes-service";
+import {findAllTuitsLikedByUser} from "../../services/likes-service";
+import {findAllTuitsDislikedByUser} from "../../services/dislikes-service";
 
 const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
     return (
@@ -17,6 +17,7 @@ const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
           <span onClick={() => likeTuit(tuit)}>
               {
                 tuit.stats && tuit.stats.likes && tuit.stats.likes > 0 &&
+                    findAllTuitsDislikedByUser("me").includes(tuit._id) &&
                   <i className="fa-solid fa-thumbs-up me-1" style={{color: 'blue'}}></i>
               }
               {
@@ -30,6 +31,9 @@ const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
           <span onClick={() => dislikeTuit(tuit)}>
               {
                   tuit.stats && tuit.stats.dislikes && tuit.stats.dislikes > 0 &&
+
+                  findAllTuitsDislikedByUser("me").includes(tuit._id) &&
+
                   <i className="fa-solid fa-thumbs-down me-1" style={{color: 'blue'}}></i>
               }
               {
