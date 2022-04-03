@@ -1,6 +1,4 @@
 import React from "react";
-import {findAllTuitsLikedByUser} from "../../services/likes-service";
-import {findAllTuitsDislikedByUser} from "../../services/dislikes-service";
 
 const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
     return (
